@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: rgb(96, 12, 230); */
+}
+.open-btn {
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 1rem 2.5rem;
+	cursor: pointer;
+}
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* background-color: aqua; */
+}
+.popup-overlay {
+	/* background-color: rgba(0, 0, 0, 0.575); */
+    background-color: dodgerblue;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+.main-popup {
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	width: 50%;
+	z-index: 1;
+	background: aqua;
+	padding: 30px 20px;
+	line-height: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-100%);
+}
+.close-btn {
+	border: .6px solid white;
+	padding: 10px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: .5s ease all;
+}
+.close-btn:hover {
+	background: white;
+}
+.popup-content p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-out {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+} 
